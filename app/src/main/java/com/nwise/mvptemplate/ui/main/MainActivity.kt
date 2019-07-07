@@ -1,7 +1,8 @@
-package com.nwise.mvptemplate
+package com.nwise.mvptemplate.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.nwise.mvptemplate.R
 
 class MainActivity : AppCompatActivity() {
 
