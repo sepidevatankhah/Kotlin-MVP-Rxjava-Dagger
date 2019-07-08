@@ -6,6 +6,12 @@ import android.view.LayoutInflater;
 import dagger.Module;
 import dagger.Provides;
 
+
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 @Module
 public class ActivityModule {
     final Activity mActivity;

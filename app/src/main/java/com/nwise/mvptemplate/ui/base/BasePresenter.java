@@ -1,8 +1,11 @@
 package com.nwise.mvptemplate.ui.base;
-
-import com.nwise.mvptemplate.di.components.ActivityComponent;
 import io.reactivex.disposables.CompositeDisposable;
 
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 public abstract class BasePresenter<V> extends AbstractPresenter<V> {
 
     private boolean isFirstTime = true;

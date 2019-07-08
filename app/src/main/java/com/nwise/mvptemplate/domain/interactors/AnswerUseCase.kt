@@ -8,9 +8,13 @@ import com.nwise.mvptemplate.domain.models.ListWrapper
 import com.nwise.mvptemplate.domain.models.Question
 import com.nwise.mvptemplate.network.Repository
 import io.reactivex.Flowable
-import io.reactivex.Observable
 import javax.inject.Inject
 
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 class AnswerUseCase @Inject constructor(
     useCaseExecutor: UseCaseExecutor,
     postExecutionThread: PostExecutionThread,

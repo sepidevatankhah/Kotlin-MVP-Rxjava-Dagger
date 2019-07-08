@@ -7,6 +7,12 @@ import io.reactivex.Observable
 import io.reactivex.Scheduler
 
 /**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
+
+/**
  * Each `UseCase` of the system orchestrate the flow of data to and from the entities.
  *
  *

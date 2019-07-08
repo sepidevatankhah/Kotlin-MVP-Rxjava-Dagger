@@ -1,7 +1,11 @@
 package com.nwise.mvptemplate.ui.base;
-
 import java.lang.ref.WeakReference;
 
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 public abstract class AbstractPresenter<V> implements Presenter<V> {
     WeakReference<V> view;
 

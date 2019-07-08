@@ -6,7 +6,11 @@ import com.nwise.mvptemplate.network.Repository
 import io.reactivex.Flowable
 import io.reactivex.Observable
 
-
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 abstract class ObservableUseCase<Responses, Params>(
     useCaseExecutor: UseCaseExecutor,
     postExecutionThread: PostExecutionThread,

@@ -7,6 +7,11 @@ import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 public interface AppApi {
 
     String BASE_URL = "https://api.stackexchange.com";

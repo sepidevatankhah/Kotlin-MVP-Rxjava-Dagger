@@ -18,8 +18,13 @@ import io.reactivex.disposables.CompositeDisposable;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 import javax.inject.Singleton;
+
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 
 @Module
 public class AppModule {
@@ -54,7 +59,6 @@ public class AppModule {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(AppApi.BASE_URL)
-                //.client(okHttpClient)
                 .build();
     }
 

@@ -1,5 +1,10 @@
 package com.nwise.mvptemplate.ui.base;
 
+/**
+ * Created by Sepideh Vatankhah on 01.08.2019.
+ * sun.vatankhah@gmail.com
+ * https://github.com/sepidevatankhah
+ */
 public interface Presenter<V> {
 
     /**

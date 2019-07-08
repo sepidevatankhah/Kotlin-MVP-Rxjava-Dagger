@@ -58,7 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemViewType(int position) {
-        if(position%2 == 0)
+        if(position%5 == 0)
         {
             return itemViewType = R.layout.even_selectable_list_item;
         }
