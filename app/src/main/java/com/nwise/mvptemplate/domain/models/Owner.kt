@@ -1,13 +1,14 @@
-package com.nwise.mvptemplate.domain.models;
-import com.google.gson.annotations.SerializedName;
+package com.nwise.mvptemplate.domain.models
+
+import com.google.gson.annotations.SerializedName
 
 /**
  * Created by Sepideh Vatankhah on 01.08.2019.
  * sun.vatankhah@gmail.com
  * https://github.com/sepidevatankhah
  */
-public class Owner {
+class Owner {
 
     @SerializedName("profile_image")
-    public String profileImage;
+    var profileImage: String? = null
 }

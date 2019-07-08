@@ -18,6 +18,6 @@ class QuestionUseCase @Inject constructor(useCaseExecutor: UseCaseExecutor,
                                           apiRepository: Repository
 ) : FlowableUseCase<ListWrapper<Question>, Question>(useCaseExecutor, postExecutionThread, apiRepository) {
     override fun interact(params: Question?): Flowable<ListWrapper<Question>> {
-        return apiRepository.getQuestions()
+        return apiRepository.questions
     }
 }
