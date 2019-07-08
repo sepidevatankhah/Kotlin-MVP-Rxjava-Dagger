@@ -1,4 +1,4 @@
-package com.hamrah.sun.sunpayment.domain.interactor.base
+package com.nwise.mvptemplate.domain.interactors.base
 
 import com.nwise.mvptemplate.domain.executer.PostExecutionThread
 import com.nwise.mvptemplate.domain.executer.UseCaseExecutor
@@ -26,8 +26,6 @@ import io.reactivex.Scheduler
 abstract class UseCase<Responses, Params>(val useCaseExecutor: UseCaseExecutor,
                                           val postExecutionThread: PostExecutionThread
 ) {
-
-
 
     fun getUseCaseExecutor(): Scheduler {
         return useCaseExecutor.scheduler

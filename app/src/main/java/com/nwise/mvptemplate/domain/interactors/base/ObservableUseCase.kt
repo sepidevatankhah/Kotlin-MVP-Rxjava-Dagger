@@ -1,9 +1,7 @@
-package com.hamrah.sun.sunpayment.domain.interactor.base
-
+package com.nwise.mvptemplate.domain.interactors.base
 import com.nwise.mvptemplate.domain.executer.PostExecutionThread
 import com.nwise.mvptemplate.domain.executer.UseCaseExecutor
 import com.nwise.mvptemplate.network.Repository
-import io.reactivex.Flowable
 import io.reactivex.Observable
 
 /**
@@ -11,6 +9,13 @@ import io.reactivex.Observable
  * sun.vatankhah@gmail.com
  * https://github.com/sepidevatankhah
  */
+
+/**
+ * @param <Responses> The response value emitted by the Observable.
+ * *
+ * @param <Params> The request value.
+ * * @author S.Vatankhah
+</Params></Responses> */
 abstract class ObservableUseCase<Responses, Params>(
     useCaseExecutor: UseCaseExecutor,
     postExecutionThread: PostExecutionThread,
@@ -18,10 +23,10 @@ abstract class ObservableUseCase<Responses, Params>(
 ) :
     UseCase<Observable<Responses>, Params>(useCaseExecutor, postExecutionThread) {
 
-    open fun execute(params: Params?): Flowable<Responses> {
+    open fun execute(params: Params?): Observable<Responses> {
         return interact(params).applySchedulers()
     }
 
-    protected abstract fun interact(params: Params?): Flowable<Responses>
+    protected abstract fun interact(params: Params?): Observable<Responses>
 
 }

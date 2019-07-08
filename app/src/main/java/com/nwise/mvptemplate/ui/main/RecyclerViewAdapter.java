@@ -23,13 +23,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(itemViewType,viewGroup,false);
+                .inflate(itemViewType, viewGroup, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Answer answer = ((Answer) data.items.get(position));
+        Answer answer = data.items.get(position);
         holder.text.setText(answer.toString());
         holder.itemView.setTag(answer.answerId);
         Glide.with(context).load(answer.owner.profileImage).into(holder.imageView);
@@ -40,17 +40,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return data.items.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder
-    {
-        public TextView text;
-        public ImageView imageView;
+    class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView text;
+        private ImageView imageView;
 
-        public MyViewHolder(@NonNull View itemView) {
+        MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = (ImageView) itemView.findViewById(R.id.img_avator);
-            text = (TextView) itemView.findViewById(R.id.text1);
-
+            imageView = itemView.findViewById(R.id.img_avator);
+            text = itemView.findViewById(R.id.text1);
 
 
         }
@@ -58,14 +56,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemViewType(int position) {
-        if(position%5 == 0)
-        {
-            return itemViewType = R.layout.even_selectable_list_item;
-        }
-        else return itemViewType = R.layout.odd_selectable_list_item;
+        if (position % 5 == 0) {
+            return itemViewType = R.layout.odd_selectable_list_item;
+        } else return itemViewType = R.layout.even_selectable_list_item;
     }
 
-    public RecyclerViewAdapter(ListWrapper<Answer> data , Context context) {
+    public RecyclerViewAdapter(ListWrapper<Answer> data, Context context) {
         this.data = data;
         this.context = context;
     }

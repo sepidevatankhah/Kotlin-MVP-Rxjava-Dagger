@@ -1,6 +1,4 @@
 package com.nwise.mvptemplate.domain.interactors.base
-
-import com.hamrah.sun.sunpayment.domain.interactor.base.UseCase
 import com.nwise.mvptemplate.domain.executer.PostExecutionThread
 import com.nwise.mvptemplate.domain.executer.UseCaseExecutor
 import com.nwise.mvptemplate.network.Repository

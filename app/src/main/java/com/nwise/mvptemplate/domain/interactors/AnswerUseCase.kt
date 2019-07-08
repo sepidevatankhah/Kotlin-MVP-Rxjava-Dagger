@@ -1,8 +1,7 @@
 package com.nwise.mvptemplate.domain.interactors
-
-import com.hamrah.sun.sunpayment.domain.interactor.base.ObservableUseCase
 import com.nwise.mvptemplate.domain.executer.PostExecutionThread
 import com.nwise.mvptemplate.domain.executer.UseCaseExecutor
+import com.nwise.mvptemplate.domain.interactors.base.FlowableUseCase
 import com.nwise.mvptemplate.domain.models.Answer
 import com.nwise.mvptemplate.domain.models.ListWrapper
 import com.nwise.mvptemplate.domain.models.Question
@@ -20,7 +19,7 @@ class AnswerUseCase @Inject constructor(
     postExecutionThread: PostExecutionThread,
     apiRepository: Repository
 ) :
-    ObservableUseCase<ListWrapper<Answer>, String>(useCaseExecutor, postExecutionThread, apiRepository) {
+    FlowableUseCase<ListWrapper<Answer>, String>(useCaseExecutor, postExecutionThread, apiRepository) {
     override fun interact(params: String?): Flowable<ListWrapper<Answer>> {
         return apiRepository.getAnswersForQuestion(params)
     }
