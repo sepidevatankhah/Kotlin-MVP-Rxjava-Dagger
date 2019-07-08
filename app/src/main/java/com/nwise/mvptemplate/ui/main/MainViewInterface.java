@@ -1,8 +1,9 @@
-package com.nwise.sunshine.ui.main;
+package com.nwise.mvptemplate.ui.main;
 
-import com.nwise.sunshine.network.model.Answer;
-import com.nwise.sunshine.network.model.ListWrapper;
-import com.nwise.sunshine.network.model.Question;
+
+import com.nwise.mvptemplate.domain.models.Answer;
+import com.nwise.mvptemplate.domain.models.ListWrapper;
+import com.nwise.mvptemplate.domain.models.Question;
 
 public interface MainViewInterface {
 

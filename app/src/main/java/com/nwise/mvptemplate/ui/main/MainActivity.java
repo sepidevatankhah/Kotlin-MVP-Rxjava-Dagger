@@ -1,4 +1,4 @@
-package com.nwise.sunshine.ui.main;
+package com.nwise.mvptemplate.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,20 +6,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.nwise.sunshine.R;
-import com.nwise.sunshine.di.component.ActivityComponent;
-import com.nwise.sunshine.ui.RecyclerViewAdapter;
-import com.nwise.sunshine.ui.base.BaseActivity;
-import com.nwise.sunshine.network.model.Answer;
-import com.nwise.sunshine.network.model.ListWrapper;
-import com.nwise.sunshine.network.model.Question;
-
+import android.widget.*;
+import com.nwise.mvptemplate.R;
+import com.nwise.mvptemplate.di.components.ActivityComponent;
+import com.nwise.mvptemplate.domain.models.Answer;
+import com.nwise.mvptemplate.domain.models.ListWrapper;
+import com.nwise.mvptemplate.domain.models.Question;
+import com.nwise.mvptemplate.ui.base.BaseActivity;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,11 +27,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
 
     private Spinner questionsSpinner;
     private RecyclerView recyclerView;
-
-//    @Override
-//    protected void initPresenter() {
-//        presenter = MainPresenter.getInstance();
-//    }
 
     @Override
     protected void injectDependencies(ActivityComponent component) {
@@ -57,7 +45,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, "Spinner item selected", Toast.LENGTH_LONG).show();
                 Question question = (Question) parent.getAdapter().getItem(position);
-                //presenter.bindAnswers(question.questionId);
+                presenter.bindAnswers(question.questionId);
             }
 
             @Override

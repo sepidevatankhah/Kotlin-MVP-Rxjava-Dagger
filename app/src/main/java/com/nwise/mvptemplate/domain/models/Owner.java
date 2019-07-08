@@ -1,4 +1,4 @@
-package com.nwise.sunshine.network.model;
+package com.nwise.mvptemplate.domain.models;
 
 import com.google.gson.annotations.SerializedName;
 

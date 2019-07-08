@@ -1,4 +1,4 @@
-package com.nwise.sunshine.network.model;
+package com.nwise.mvptemplate.domain.models;
 
 import java.util.List;
 

@@ -1,17 +1,14 @@
-package com.nwise.sunshine;
+package com.nwise.mvptemplate;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-
-import com.nwise.sunshine.di.component.ActivityComponent;
-import com.nwise.sunshine.di.component.AppComponent;
-import com.nwise.sunshine.di.component.FragmentComponent;
-import com.nwise.sunshine.di.module.ActivityModule;
-import com.nwise.sunshine.di.module.FragmentModule;
+import com.nwise.mvptemplate.di.components.ActivityComponent;
+import com.nwise.mvptemplate.di.components.AppComponent;
+import com.nwise.mvptemplate.di.components.DaggerAppComponent;
+import com.nwise.mvptemplate.di.modules.ActivityModule;
+import com.nwise.mvptemplate.di.modules.AppModule;
 
 public class MainApplication extends Application {
 
@@ -31,14 +28,10 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-       // component = DaggerAppComponent.builder().build();
+        component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
     }
 
-    public  static FragmentComponent getComponent(Fragment fragment) {
-        assert (fragment.getActivity() != null);
-        Activity activity = fragment.getActivity();
-        return component.plus(new ActivityModule(activity)).plus(new FragmentModule(fragment));
-    }
+
 
     public  static ActivityComponent getComponent(AppCompatActivity activity) {
         return component.plus(new ActivityModule(activity));
