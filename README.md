@@ -1,5 +1,5 @@
 # MVPRxjavaDagger
-This simple example application implements a strong template structure clean MVP Architecture with RxJava + Dagger2 + Retrofit2 + using Kotlin and also Glide, constraint-layout API(This application will cover two design patterns: MVP and Dependency Injection through clean architecture)
+This Kotlin simple example application implements a strong template structure with MVP and clean Architecture, used technolegies : RxJava + Dagger2 + Retrofit2 and also Glide, constraint-layout API(This application will cover two design patterns: MVP and Dependency Injection through clean architecture)
 
 Library reference resources:
 <ol>
